@@ -738,7 +738,7 @@
     uuid "^9.0.0"
     zod "^3.22.3"
 
-"@langchain/core@0.1.43", "@langchain/core@~0.1", "@langchain/core@~0.1.13", "@langchain/core@~0.1.36", "@langchain/core@~0.1.41", "@langchain/core@~0.1.5":
+"@langchain/core@0.1.43", "@langchain/core@~0.1", "@langchain/core@~0.1.36", "@langchain/core@~0.1.41", "@langchain/core@~0.1.5", "@langchain/core@~0.1.56":
   version "0.1.43"
   resolved "https://registry.yarnpkg.com/@langchain/core/-/core-0.1.43.tgz#2d0af42817f8d431bba5252b2ff667a9cb3a25e5"
   integrity sha512-owE+UU38e4TsUq5yoaKCF+ag6u0ppwgdaqEt2Q57pdcr9nEcy8/PgTunxB10Vksq4fTJgnwWEYf/wMGZnFlRow==
@@ -763,25 +763,16 @@
     "@google/generative-ai" "^0.1.3"
     "@langchain/core" "~0.1.5"
 
-"@langchain/groq@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@langchain/groq/-/groq-0.0.3.tgz#0f890501e308d86b2ccc08be4bbe4591d697dd3a"
-  integrity sha512-VJc0madTIsTr+bu/RXHg3ZN0TuUdunESNh39TtctrS/mJvgQXOCA1GDe5kTqv5naegFJh4oO3noR+4DbfDtrUA==
+"@langchain/groq@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@langchain/groq/-/groq-0.0.9.tgz#a44b19af3b784f324057bfb0217ff0613d148c2f"
+  integrity sha512-/QGGgazYdxlN8FCmPfEVDO9Hg55POvQdnoou+b3lsugmwP1TYPRtqLW6JY7Atb36X4vjEJwiMCnntDXdT7vgaw==
   dependencies:
-    "@langchain/core" "~0.1"
-    "@langchain/openai" "^0.0.14"
-    groq-sdk "^0.3.0"
-
-"@langchain/openai@^0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@langchain/openai/-/openai-0.0.14.tgz#27a6ba83f6b754391868b22f3b90cd440038acf0"
-  integrity sha512-co6nRylPrLGY/C3JYxhHt6cxLq07P086O7K3QaZH7SFFErIN9wSzJonpvhZR07DEUq6eK6wKgh2ORxA/NcjSRQ==
-  dependencies:
-    "@langchain/core" "~0.1.13"
-    js-tiktoken "^1.0.7"
-    openai "^4.26.0"
+    "@langchain/core" "~0.1.56"
+    "@langchain/openai" "~0.0.28"
+    groq-sdk "^0.3.2"
     zod "^3.22.4"
-    zod-to-json-schema "^3.22.3"
+    zod-to-json-schema "^3.22.5"
 
 "@langchain/openai@^0.0.18", "@langchain/openai@~0.0.14":
   version "0.0.18"
@@ -791,6 +782,17 @@
     "@langchain/core" "~0.1.41"
     js-tiktoken "^1.0.7"
     openai "^4.26.0"
+    zod "^3.22.4"
+    zod-to-json-schema "^3.22.3"
+
+"@langchain/openai@~0.0.28":
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/@langchain/openai/-/openai-0.0.29.tgz#897ce8eb920900c0dc94962dfccf34d91309c5b1"
+  integrity sha512-NMoVgePqflbI8Dzi7QhBAS9wRiaVxIkYkG/RYLU979t/ZLWQjf+9tijc/27UtCP7w/UYCGX/qgQAho40dsZ7LA==
+  dependencies:
+    "@langchain/core" "~0.1.56"
+    js-tiktoken "^1.0.7"
+    openai "^4.41.1"
     zod "^3.22.4"
     zod-to-json-schema "^3.22.3"
 
@@ -3589,10 +3591,10 @@ grammy@^1.16.2:
     debug "^4.3.4"
     node-fetch "^2.6.9"
 
-groq-sdk@^0.3.0:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/groq-sdk/-/groq-sdk-0.3.2.tgz#f5e64732791e25910a8f11d228f232816ef6047f"
-  integrity sha512-Xp1xOea7nqUcTMndpiA8VkjZ05jM/eUUeCILxhRF+c2etBz/myQwRcUrr5lpWc0euIt96AiBMa9aYa0Iqrh13g==
+groq-sdk@^0.3.2:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/groq-sdk/-/groq-sdk-0.3.3.tgz#88cecb4049fc899b97be7396ce087fa46a704258"
+  integrity sha512-wdOeZ2QymPjjP3tmFpUAnfMisoLbt7xF2MfpROeFAngcqWbfTyB9j9pMWSEAMF/E4gZx8f2Y+5zswO0q92CSxA==
   dependencies:
     "@types/node" "^18.11.18"
     "@types/node-fetch" "^2.6.4"
@@ -5136,6 +5138,20 @@ openai@^4.26.0:
     abort-controller "^3.0.0"
     agentkeepalive "^4.2.1"
     digest-fetch "^1.3.0"
+    form-data-encoder "1.7.2"
+    formdata-node "^4.3.2"
+    node-fetch "^2.6.7"
+    web-streams-polyfill "^3.2.1"
+
+openai@^4.41.1:
+  version "4.47.1"
+  resolved "https://registry.yarnpkg.com/openai/-/openai-4.47.1.tgz#1d23c7a8eb3d7bcdc69709cd905f4c9af0181dba"
+  integrity sha512-WWSxhC/69ZhYWxH/OBsLEirIjUcfpQ5+ihkXKp06hmeYXgBBIUCa9IptMzYx6NdkiOCsSGYCnTIsxaic3AjRCQ==
+  dependencies:
+    "@types/node" "^18.11.18"
+    "@types/node-fetch" "^2.6.4"
+    abort-controller "^3.0.0"
+    agentkeepalive "^4.2.1"
     form-data-encoder "1.7.2"
     formdata-node "^4.3.2"
     node-fetch "^2.6.7"
@@ -7134,6 +7150,11 @@ zod-to-json-schema@^3.22.3, zod-to-json-schema@^3.22.4:
   version "3.22.4"
   resolved "https://registry.yarnpkg.com/zod-to-json-schema/-/zod-to-json-schema-3.22.4.tgz#f8cc691f6043e9084375e85fb1f76ebafe253d70"
   integrity sha512-2Ed5dJ+n/O3cU383xSY28cuVi0BCQhF8nYqWU5paEpl7fVdqdAmiLdqLyfblbNdfOFwFfi/mqU4O1pwc60iBhQ==
+
+zod-to-json-schema@^3.22.5:
+  version "3.23.0"
+  resolved "https://registry.yarnpkg.com/zod-to-json-schema/-/zod-to-json-schema-3.23.0.tgz#4fc60e88d3c709eedbfaae3f92f8a7bf786469f2"
+  integrity sha512-az0uJ243PxsRIa2x1WmNE/pnuA05gUq/JB8Lwe1EDCCL/Fz9MgjYQ0fPlyc2Tcv6aF2ZA7WM5TWaRZVEFaAIag==
 
 zod@^3.22.3, zod@^3.22.4:
   version "3.22.4"

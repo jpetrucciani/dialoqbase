@@ -290,15 +290,6 @@ const LLMS: {
     config: "{}",
   },
   {
-    name: "LLaMA2-70b (Groq)",
-    model_id: "llama2-70b-4096-dbase",
-    model_type: "chat",
-    model_provider: "Groq",
-    stream_available: true,
-    local_model: false,
-    config: "{}",
-  },
-  {
     name: "Mixtral-8x7b (Groq)",
     model_id: "mixtral-8x7b-32768-dbase",
     model_type: "chat",

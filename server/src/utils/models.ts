@@ -8,13 +8,18 @@ import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 import { ChatOllama } from "@langchain/community/chat_models/ollama";
 import { Replicate } from "@langchain/community/llms/replicate";
 import { ChatGroq } from "@langchain/groq";
+import {
+  BaseLanguageModel,
+  BaseLanguageModelCallOptions,
+} from '@langchain/core/language_models/base';
+import { BaseChatModel } from '@langchain/core/language_models/chat_models';
 
 export const chatModelProvider = (
   provider: string,
   modelName: string,
   temperature: number,
   otherFields?: any
-) => {
+): BaseLanguageModel<any, BaseLanguageModelCallOptions> => {
   modelName = modelName.replace("-dbase", "");
   modelName = modelName.replace(/_dialoqbase_[0-9]+$/, "");
 
@@ -104,7 +109,7 @@ export const chatModelProvider = (
         model: modelName,
         temperature: temperature,
         ...otherFields,
-      });
+      }) as unknown as BaseChatModel;
     default:
       console.log("using default");
       return new ChatOpenAI({
